@@ -1,0 +1,78 @@
+.row,
+.form-group{
+	display:flex;
+}
+
+.col-md-6 {
+    width: 50% !important;
+}
+
+.col-md-9{
+	width:70% !important;
+}
+select{
+	width:100% !important;
+	box-sizing:border-box;
+}
+
+select,
+.select2-hidden-accessible{
+	max-width:initial !important;
+}
+
+@media (min-width:992px) and (max-width:1200px){
+	.col-md-9{
+		width:55% !important;
+	}
+}
+@media (max-width:991px){
+	body{
+		overflow-x:auto;
+	}
+	.panel .panel-heading, .panel .panel-footer, .panel .panel-body{
+	width:100vw
+	}
+
+	.form-control {
+		max-width:170px !important;
+	}
+
+	.form-control span{
+		width:initial !important;
+	}
+
+	.col-md-6 .col-md-9{
+		width:70% !important;
+	}
+
+	.control-label{
+		max-width:80px !important;
+		width:80px !important;
+	}
+}
+
+@media (max-width:767px){
+
+	.form-control,
+	.col-md-1.control-label{
+		max-width:80px !important;
+		width:80px !important;
+	}
+}
+
+/** 追加 */
+.div-flex {
+	display: flex;
+}
+
+select#busServicesList{
+	width: auto !important;
+}
+
+select#searchBusServiceId{
+	width: auto !important;
+}
+
+select.cancelPolicyDetail{
+	width: auto !important;
+}

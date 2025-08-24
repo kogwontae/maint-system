@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="maint.mapper.AgenciesMapper">
+
+    <select id="getAllAgenciesForSelectOption" resultType="AgencySelectDto">
+        SELECT "business_corp_id"
+             , "name"
+          FROM "agencies"
+         WHERE "del_flag"       = 0
+           AND "available_flag" = 1
+    </select>
+
+    <select id="getBusinessCorpNameByBusinessCorpId" resultType="String">
+        SELECT "name"
+          FROM "agencies"
+         WHERE "del_flag"           = 0
+           AND "business_corp_id"   = #{businessCorpId}
+    </select>
+
+</mapper>
